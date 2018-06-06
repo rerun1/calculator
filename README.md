@@ -4,7 +4,7 @@
 
 
 ## Description
-___
+---
 
 Basic calculator functions with a user-interface
 
