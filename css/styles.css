@@ -155,42 +155,33 @@ p {
   padding: 0;
 }
 h1 {
+  font-size: 1em;
+  line-height: 1;
   margin: 0;
   padding: 0;
 }
-
-/*begin media queries*/
-
-/*For 320 and smaller*/
-@media only screen and (max-width: 600px) {
-  body {
-    background: #bae8e3 url("../img/scamperCal2_blue_Xsmall.png") no-repeat fixed bottom right;
-  }
-
-  .container2 p {
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: 1em 0 20em 0;
-  }
-}
 .wrapper {
-  width: 100%;
-  height: 100%;
-  padding: .5em;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 0 2em 0;
+  padding: 0em 1.5em;
 }
 .headline {
   width: 100%;
-  margin: 0 0 .5em .25em;
+  height: 3em;
 }
 .headline h1 {
-  font-size: 1.5em;
-  line-height: 1;
+  font-size: 2em;
   color: #1b4e69;
-  padding: .25em .125em;
+  margin: .5em .25em .5em .25em;
 }
 .container {
   float: left;
-  width: 400px;
-  height: 489px;
+  width: 53%;
+  max-width: 500px;
+  height: 70%;
+  min-height: 500px;
+  max-height: 600px;
   display: grid;
   grid-template-columns: 22% 22% 22% 22%;
   grid-column-gap:4%;
@@ -201,21 +192,81 @@ h1 {
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  margin: 0em 1em 0 0;
   padding: 1.5em 1em .75em 1em;
 }
 .container2 {
   float: left;
-  width: 400px;
-  margin: 0em 2em 1em 0em;
+  width: 47%;
 }
 .container2 p {
   font-size: .75em;
   line-height: 1.125;
   text-align: left;
   color: #266c91;
-  padding: 1em .25em .25em .5em;
+  background-color: rgba(255, 255, 255, 0.0);
+  padding: 1em 8em .25em .5em;
 }
+
+@media only all and (max-width: 1084px) {
+  body {
+    background: #bae8e3 url("../img/scamperCal2_blue_small.png") no-repeat fixed bottom right;
+  }
+  .container2 p {
+    padding: 1em 1em .25em .5em;
+  }
+}
+@media only all and (max-width: 750px) {
+  body {
+    background: #bae8e3 url("../img/scamperCal2_blue_xsmall.png") no-repeat fixed bottom right;
+  }
+  .wrapper {
+    padding: 0em 1em;
+  }
+  .headline {
+    height: 2.3em;
+  }
+  .headline h1 {
+    font-size: 1.55em;
+    margin: .5 0 .25em .125em;
+  }
+  .container {
+    float: left;
+    width: 53%;
+    max-width: 400px;
+    height: 70%;
+    min-height: 400px;
+    max-height: 500px;
+    padding: 2em 1em .75em 1em;
+  }
+  .container2 p {
+    padding: 1em 1em .25em .5em;
+  }
+}
+@media only all and (max-width: 558px) {
+  .headline {
+    height: 3.3em;
+  }
+  .headline h1 {
+    font-size: 1.55em;
+    margin: .5 0 .25em .125em;
+  }
+  .container {
+    width: 100%;
+    max-width: 390px;
+    height: 70%;
+    min-height: 390px;
+    max-height: 490px;
+    padding: 1.35em .75em .75em .75em;
+  }
+  .container2 {
+    width: 100%;
+  }
+  .container2 p {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1em 0 20em 0;
+  }
+}
+
 .screen {
   color: black;
   grid-column: 1 / 5;
