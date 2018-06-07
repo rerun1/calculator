@@ -162,87 +162,16 @@ h1 {
 /*begin media queries*/
 
 /*For 320 and smaller*/
-/* @media only screen and (max-width: 320px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 280px 40px;
-    grid-template-rows: 75px 359px 300px;
+@media only screen and (max-width: 600px) {
+  body {
+    background: #bae8e3 url("../img/scamperCal2_blue_Xsmall.png") no-repeat fixed bottom right;
   }
-  .headline {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    height: 75px;
-  }
-  .headline h1 {
-    font-size: 1.5em;
-    line-height: 1;
-  }
-  .container {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    width: 280px;
-    height: 359px;
-  }
-  .container2 {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-  }
-  .container2 p {
-    font-size: .75em;
-    line-height: 1.125;
-    text-align: left;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-} */
 
-/*For 414x736 and smaller*/
-/* @media only screen and (max-width: 414px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 350px 64px;
-    grid-template-rows: 75px 429px auto;
-  }
-  .headline {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    height: 75px;
-  }
-  .container {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    width: 350px;
-    height: 429px;
-  }
-  .container2 {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
+  .container2 p {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1em 0 20em 0;
   }
 }
-@media only screen and (max-width: 736px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 280px 456px;
-    grid-template-rows: 75px 359px auto;
-  }
-  .headline {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    height: 75px;
-  }
-  .container {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    width: 280px;
-    height: 359px;
-  }
-  .container2 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    width: 456px;
-  }
-} */
-/*end media queries*/
-
 .wrapper {
   width: 100%;
   height: 100%;
@@ -285,7 +214,7 @@ h1 {
   line-height: 1.125;
   text-align: left;
   color: #266c91;
-  padding: .25em .25em .25em .5em;
+  padding: 1em .25em .25em .5em;
 }
 .screen {
   color: black;
@@ -305,7 +234,7 @@ h1 {
   border-radius: 12px;
   box-shadow: 0px 0px 2px 4px #384a54;
   background: linear-gradient(#fff 0%, #000 20%);
-  padding: .25em 0 0 0;
+  padding: .5em 0 0 0;
 }
 .seven {
   grid-column: 1 / 2;
