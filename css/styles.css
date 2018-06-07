@@ -139,8 +139,8 @@ body {
   font-style: normal;
   font-size: 30px;
   line-height: 1;
-  color: #10312d;
-  background: #bae8e3 url("../img/scamperCal2_blue_Xsmall.png") no-repeat fixed bottom right;
+  color: #163f54;
+  background: #bae8e3 url("../img/scamperCal2_blue.png") no-repeat fixed bottom right;
   margin: 0;
   padding: 0;
 
@@ -158,26 +158,110 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+/*begin media queries*/
+
 /*For 320 and smaller*/
+/* @media only screen and (max-width: 320px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 280px 40px;
+    grid-template-rows: 75px 359px 300px;
+  }
+  .headline {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    height: 75px;
+  }
+  .headline h1 {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .container {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    width: 280px;
+    height: 359px;
+  }
+  .container2 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+  .container2 p {
+    font-size: .75em;
+    line-height: 1.125;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+} */
+
+/*For 414x736 and smaller*/
+/* @media only screen and (max-width: 414px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 350px 64px;
+    grid-template-rows: 75px 429px auto;
+  }
+  .headline {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    height: 75px;
+  }
+  .container {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    width: 350px;
+    height: 429px;
+  }
+  .container2 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+}
+@media only screen and (max-width: 736px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 280px 456px;
+    grid-template-rows: 75px 359px auto;
+  }
+  .headline {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    height: 75px;
+  }
+  .container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 280px;
+    height: 359px;
+  }
+  .container2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 456px;
+  }
+} */
+/*end media queries*/
+
 .wrapper {
-  grid-template-columns: 280px auto;
-  grid-template-rows: 45px 359px auto;
-  padding: 0 .5em .5em .5em;
+  width: 100%;
+  height: 100%;
+  padding: .5em;
 }
 .headline {
-  grid-row: 1 / 2;
-  margin: 0 0 .25em 0;
-  padding: .5em 0 0 .5em;
+  width: 100%;
+  margin: 0 0 .5em .25em;
 }
 .headline h1 {
   font-size: 1.5em;
   line-height: 1;
+  color: #1b4e69;
+  padding: .25em .125em;
 }
 .container {
-  grid-column: 1 / 3;
-  grid-row: 2 / 3;
-  width: 280px;
-  height: 359px;
+  float: left;
+  width: 400px;
+  height: 489px;
   display: grid;
   grid-template-columns: 22% 22% 22% 22%;
   grid-column-gap:4%;
@@ -188,26 +272,30 @@ h1 {
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 1em;
-  margin: 0;
+  margin: 0em 1em 0 0;
+  padding: 1.5em 1em .75em 1em;
 }
 .container2 {
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
-  margin: .25em 0 6em 0;
-  padding: 0;
+  float: left;
+  width: 400px;
+  margin: 0em 2em 1em 0em;
 }
 .container2 p {
   font-size: .75em;
   line-height: 1.125;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.5);
+  color: #266c91;
   padding: .25em .25em .25em .5em;
 }
 .screen {
   color: black;
   grid-column: 1 / 5;
   grid-row: 1 / 3;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: .75em;
+  font-weight: 400;
+  font-variant-caps: all-small-caps;
+  padding: .125em 0 0 1em;
 }
 .box {
   font-size: .95em;
