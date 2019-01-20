@@ -168,12 +168,12 @@ h1 {
 }
 .headline {
   width: 100%;
-  height: 3em;
+  /* height: 3em; */
 }
 .headline h1 {
   font-size: 2em;
   color: #1b4e69;
-  margin: .5em .25em .5em .25em;
+  margin: .5em .25em;
 }
 .container {
   float: left;
@@ -194,9 +194,19 @@ h1 {
   background-size: 100% 100%;
   padding: 1.5em 1em .75em 1em;
 }
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .container2 {
   float: left;
   width: 47%;
+}
+.container2::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .container2 p {
   font-size: .75em;
@@ -206,6 +216,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.0);
   padding: 1em 8em .25em .5em;
 }
+
 
 @media only all and (max-width: 1084px) {
   body {
@@ -222,12 +233,9 @@ h1 {
   .wrapper {
     padding: 0em 1em;
   }
-  .headline {
-    height: 2.3em;
-  }
   .headline h1 {
-    font-size: 1.55em;
-    margin: .5 0 .25em .125em;
+    font-size: 1.4em;
+    margin: .25em .125em;
   }
   .container {
     float: left;
@@ -236,34 +244,33 @@ h1 {
     height: 70%;
     min-height: 400px;
     max-height: 500px;
-    padding: 2em 1em .75em 1em;
+    padding: 1.5em 1em .75em 1em;
   }
   .container2 p {
     padding: 1em 1em .25em .5em;
   }
 }
-@media only all and (max-width: 558px) {
+@media only all and (max-width: 568px) {
   .headline {
-    height: 3.3em;
+    width: 100%;
   }
   .headline h1 {
-    font-size: 1.55em;
-    margin: .5 0 .25em .125em;
+    font-size: 1.1em;
   }
   .container {
     width: 100%;
     max-width: 390px;
     height: 70%;
     min-height: 390px;
-    max-height: 490px;
-    padding: 1.35em .75em .75em .75em;
+    max-height: 450px;
+    padding: 1.1em .5em .5em .5em;
   }
   .container2 {
     width: 100%;
   }
   .container2 p {
     background-color: rgba(255, 255, 255, 0.5);
-    margin: 1em 0 20em 0;
+    margin: .5em 0 20em 0;
   }
 }
 
