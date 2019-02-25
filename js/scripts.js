@@ -1,27 +1,4 @@
-
-var scamperSays = function(name, favoriteDog) {
-  return "Well " + name + ", Scamper doesn't like " + favoriteDog + ", but that's okay because this isn't about you or your dog! Scamper really wants to do math.";
-};
-
-var userName = prompt("What is your name?");
-
-var userFavoriteDog = prompt("What breed of dog is your favorite?");
-
-alert (scamperSays(userName, userFavoriteDog));
-
-var bodyMassIndex = function(weight, height){
-  var convertWeight = weight * .45;
-  var convertHeight = height * .025;
-  var squareHeight = convertHeight * convertHeight;
-  var bmi = convertWeight / squareHeight;
-  return bmi.toFixed(1);
-};
-
-var userWeight = parseInt(prompt(userName + ", Scamper is so rude, he wants to know how much you weigh in pounds. Approximately, no fractions please, Scamper doesn't do fractions..."));
-
-var userHeight = parseInt(prompt("and how tall are you in inches, " + userName +  "? The concept of feet doesn't work for dogs for several reasons."));
-
-alert(userName + ", your bmi is " + bodyMassIndex(userWeight, userHeight));
+// begin business logic
 
 var add = function(number1, number2) {
   return number1 + number2;
@@ -41,6 +18,49 @@ var divide = function(number1, number2) {
 var remainder = function(number1, number2) {
   return number1 % number2;
 };
+
+
+var bodyMassIndex = function(weight,height) {
+  return ((weight / (height*height))*703).toFixed(1);
+};
+
+// 1 inch = .0254 meters
+// 1 lb = 0.45359237 kg
+// so 0.45359237 / .0254 ^2 = 703.0696 or just 703.
+// and so
+// Imperial BMI = 703 x weight (lbs) / [height (in)^2].
+
+// included above calculation cuz I'm dumb, it will remind me why 703
+
+var celsius = function(fahrenheit) {
+  return (fahrenheit - 32)*.556;
+};
+var gallonsToLiters = function(gallons) {
+  return gallons * 3.78541;
+};
+// Celsius and gallonsToLiters functions not called below
+
+// end business logic
+
+var scamperSays = function(name, favoriteDog) {
+  return "Well " + name + ", Scamper doesn't like " + favoriteDog + ", but that's okay because this isn't about you or your dog! Scamper really wants to do math.";
+};
+
+var userName = prompt("What is your name?");
+
+var userFavoriteDog = prompt("What breed of dog is your favorite?");
+
+alert (scamperSays(userName, userFavoriteDog));
+
+
+
+var userWeight = parseInt(prompt(userName + ", Scamper is so rude, he wants to know how much you weigh in pounds. Approximately, no fractions please, Scamper doesn't do fractions..."));
+
+var userHeight = parseInt(prompt("and how tall are you in inches, " + userName +  "? The concept of feet doesn't work for dogs for several reasons."));
+
+alert(userName + ", your bmi is " + bodyMassIndex(userWeight, userHeight));
+
+
 
 var userNumber1 = parseInt(prompt(userName + " Scamper would like you to enter a positive whole number."));
 
