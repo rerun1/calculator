@@ -187,7 +187,7 @@ body {
   font-family: 'ubuntu', sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 30px;
+  font-size: 16px;
   line-height: 1;
   color: #163f54;
   background: #bae8e3 url("../img/scamperCal2_blue.png") no-repeat fixed bottom right;
@@ -201,10 +201,10 @@ body {
   font-variant-ligatures: common-ligatures;
 }
 h1 {
-  font-size: 1em;
+  font-size: 2em;
   line-height: 1;
   color: #1b4e69;
-  margin: 0;
+  margin: 1em 0 1em 0;
   padding: 0;
 }
 p {
@@ -212,6 +212,14 @@ p {
   margin: 0;
   padding: 0;
 }
+
+textarea.form-control {
+  color: red;
+}
+button {
+  margin: 0 0 1em 0;
+}
+
 
 @media only all and (max-width: 1084px) {
   body {
@@ -221,10 +229,5 @@ p {
 @media only all and (max-width: 750px) {
   body {
     background: #bae8e3 url("../img/scamperCal2_blue_xsmall.png") no-repeat fixed bottom right;
-  }
-}
-@media only all and (max-width: 568px) {
-  h1 {
-    font-size: 1.1em;
   }
 }

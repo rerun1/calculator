@@ -48,6 +48,27 @@ $(document).ready(function() {
     var userNumber1 = parseInt($("#add1").val());
     var userNumber2 = parseInt($("#add2").val());
     var result = add(userNumber1, userNumber2);
-    $("#output").text(result);
+    $("#addOutput").text(result);
+  });
+  $("form#subtract").submit(function(event){
+    event.preventDefault();
+    var userNumber3 = parseInt($("#subtract1").val());
+    var userNumber4 = parseInt($("#subtract2").val());
+    var result = subtract(userNumber3, userNumber4);
+    $("#subtractOutput").text(result);
+  });
+  $("form#multiply").submit(function(event){
+    event.preventDefault();
+    var userNumber5 = parseInt($("#multiply1").val());
+    var userNumber6 = parseInt($("#multiply2").val());
+    var result = multiply(userNumber5, userNumber6);
+    $("#multiplyOutput").text(result);
+  });
+  $("form#divide").submit(function(event){
+    event.preventDefault();
+    var userNumber7 = parseInt($("#divide1").val());
+    var userNumber8 = parseInt($("#divide2").val());
+    var result = divide(userNumber7, userNumber8);
+    $("#divideOutput").text(result);
   });
 });
