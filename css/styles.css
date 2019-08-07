@@ -217,9 +217,21 @@ textarea.form-control {
   color: red;
 }
 button {
-  margin: 0 0 1em 0;
+  margin: 1em 0 0 0;
 }
-
+.result p {
+  font-size: 2em;
+  color: red;
+  text-align:left:
+}
+.resultText p {
+  font-size: 1.1em;
+  color: red;
+  text-align: right;
+}
+.radio {
+  border: 1px solid red;
+}
 
 @media only all and (max-width: 1084px) {
   body {
@@ -229,5 +241,14 @@ button {
 @media only all and (max-width: 750px) {
   body {
     background: #bae8e3 url("../img/scamperCal2_blue_xsmall.png") no-repeat fixed bottom right;
+  }
+}
+@media only all and (max-width:500px) {
+  .result p {
+    margin-left: .5em;
+  }
+  .resultText p {
+    text-align: left;
+    margin-left: .5em;
   }
 }

@@ -43,32 +43,46 @@ var gallonsToLiters = function(gallons) {
 // end business logic
 
 $(document).ready(function() {
-  $("form#add").submit(function(event){
+  $("form#calculator").submit(function(event){
     event.preventDefault();
-    var userNumber1 = parseInt($("#add1").val());
-    var userNumber2 = parseInt($("#add2").val());
-    var result = add(userNumber1, userNumber2);
-    $("#addOutput").text(result);
+    var userNumber1 = parseInt($("#input1").val());
+    var userNumber2 = parseInt($("#input2").val());
+    var operator = $("input:radio[name=operator]:checked").val();
+    var userOperator;
+    var result;
+
+    console.log(operator);
+    $("p#error").empty();
+    $("p#output").empty();
+    $("p#result").empty();
+    $("span#outputParagraph").show();
+    $("span#resultParagraph").show();
+
+    if (operator === "add") {
+      $("div#radio").removeClass("radio");
+      result = add(userNumber1,userNumber2);
+      userOperator = " + ";
+    } else if (operator === "subtract"){
+      $("div#radio").removeClass("radio");
+      result = subtract(userNumber1,userNumber2);
+      userOperator = " - ";
+    } else if (operator === "multiply") {
+      $("div#radio").removeClass("radio");
+      result = multiply(userNumber1,userNumber2);
+      userOperator = " x ";
+    } else if (operator === "divide") {
+      $("div#radio").removeClass("radio");
+      result = divide(userNumber1,userNumber2);
+      userOperator = " divided by ";
+    } else {
+      $("div#radio").addClass("radio")
+      $("p#error").empty().text("please select a function above");
+      $("span#outputParagraph").hide();
+      $("span#resultParagraph").hide();
+    }
+
+    $("p#output").text("Scamper says " + userNumber1 + userOperator + userNumber2 + " = ");
+    $("p#result").text(result)
   });
-  $("form#subtract").submit(function(event){
-    event.preventDefault();
-    var userNumber3 = parseInt($("#subtract1").val());
-    var userNumber4 = parseInt($("#subtract2").val());
-    var result = subtract(userNumber3, userNumber4);
-    $("#subtractOutput").text(result);
-  });
-  $("form#multiply").submit(function(event){
-    event.preventDefault();
-    var userNumber5 = parseInt($("#multiply1").val());
-    var userNumber6 = parseInt($("#multiply2").val());
-    var result = multiply(userNumber5, userNumber6);
-    $("#multiplyOutput").text(result);
-  });
-  $("form#divide").submit(function(event){
-    event.preventDefault();
-    var userNumber7 = parseInt($("#divide1").val());
-    var userNumber8 = parseInt($("#divide2").val());
-    var result = divide(userNumber7, userNumber8);
-    $("#divideOutput").text(result);
-  });
+
 });
